@@ -17,11 +17,6 @@ RSpec.describe "Takedesk removal request links", system: true do
     CGI.parse(URI(link[:href]).query)["url"].first
   end
 
-  def open_show_more
-    return unless page.has_css?("#post_1 .post-action-menu__show-more", wait: 1)
-    find("#post_1 .post-action-menu__show-more").click
-  end
-
   before { sign_in(user) }
 
   context "with a valid desk address" do
@@ -71,7 +66,8 @@ RSpec.describe "Takedesk removal request links", system: true do
       visit("/t/#{topic.slug}/#{topic.id}")
 
       expect(page).to have_css("#post_1 .post-controls")
-      open_show_more
+      # A collapsed button would add the show more menu: neither may exist.
+      expect(page).to have_no_css("#post_1 .post-action-menu__show-more")
       expect(page).to have_no_css(".post-action-menu__takedesk-report")
       expect(page).to have_no_css(".takedesk-footer")
       expect(page).to have_no_css(".sidebar-section-link[data-link-name='takedesk-report']")
@@ -83,7 +79,7 @@ RSpec.describe "Takedesk removal request links", system: true do
     visit("/t/#{topic.slug}/#{topic.id}")
 
     expect(page).to have_css("#post_1 .post-controls")
-    open_show_more
+    expect(page).to have_no_css("#post_1 .post-action-menu__show-more")
     expect(page).to have_no_css(".post-action-menu__takedesk-report")
     expect(page).to have_no_css(".takedesk-footer")
     expect(page).to have_no_css(".sidebar-section-link[data-link-name='takedesk-report']")
