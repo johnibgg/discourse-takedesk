@@ -1,0 +1,21 @@
+desk_url:
+  type: string
+  default: ""
+footer_link:
+  type: bool
+  default: true
+footer_label:
+  type: string
+  default: "Report content"
+sidebar_link:
+  type: bool
+  default: true
+post_menu_button:
+  type: bool
+  default: true
+post_menu_label:
+  type: string
+  default: "Report for removal"
+post_menu_collapsed:
+  type: bool
+  default: true

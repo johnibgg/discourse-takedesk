@@ -1,0 +1,11 @@
+en:
+  theme_metadata:
+    description: "Adds a compliant way to request removal of content (TAKE IT DOWN Act, EU DSA, UK Online Safety Act, DMCA) using Takedesk."
+    settings:
+      desk_url: "Address of your Takedesk request page, shown in your Takedesk dashboard under Removal desks (for example https://takedesk.marginapp.workers.dev/r/my-forum). Nothing is shown until this is set. Create a free desk at https://takedesk.marginapp.workers.dev/dashboard/#signup"
+      footer_link: "Show a link at the bottom of every page. The TAKE IT DOWN Act requires a clear and conspicuous notice of your removal process."
+      footer_label: "Text of the footer and sidebar links."
+      sidebar_link: "Add the link to the Community section of the sidebar."
+      post_menu_button: "Add a button to each post that opens the request form with the address of the post filled in."
+      post_menu_label: "Label and tooltip of the post button."
+      post_menu_collapsed: "Keep the post button behind the \"…\" menu, next to the other secondary actions."

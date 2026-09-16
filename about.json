@@ -1,0 +1,9 @@
+{
+  "name": "Takedesk Removal Requests",
+  "component": true,
+  "authors": "Takedesk",
+  "about_url": "https://takedesk.marginapp.workers.dev/",
+  "license_url": "https://github.com/johnibgg/discourse-takedesk/blob/main/LICENSE",
+  "theme_version": "1.0.0",
+  "minimum_discourse_version": "3.4.0"
+}
